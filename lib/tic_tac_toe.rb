@@ -21,7 +21,7 @@ class TicTacToe
   end
 
     def position_taken?(index)
-    !@board[index].nil? || @board[position] == " " || @board[position] == "" 
+    @board[index].nil? || @board[position] == " " || @board[position] == ""
       return false
     else
       return true
@@ -39,7 +39,7 @@ end
 def turn_count
   counter = 0
   @board.each do |player|
-    if player == "X" || player = "O"
+    if player == "X" || player == "O"
       counter += 1
     end
   end
